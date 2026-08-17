@@ -92,20 +92,29 @@ body {
 
 /* --- ZONA DERECHA (TUS FOTOS) --- */
 .content {
-    flex: 1; /* Toma todo el ancho que sobra de la pantalla */
-    padding: 72px; /* El margen para que el cuadro gris no toque los bordes */
+    flex: 1; 
+    /* Reducimos el margen superior e inferior para subir el carrusel */
+    padding: 30px 50px; 
     background-color: #ffffff;
     display: flex;
     justify-content: center;
+    align-items: center; /* Esto centra el carrusel verticalmente de forma perfecta */
+    height: 100vh; /* Evita que el contenedor sea más grande que la pantalla */
 }
 
-/* El rectángulo de tu maqueta */
-/* --- ESTILOS DEL CARRUSEL (Reemplazo del cuadro gris) --- */
+/* --- ESTILOS DEL CARRUSEL --- */
 .swiper {
     width: 100%;
-    max-width: 1152px; /* Tu medida de Figma */
-    height: 880px; /* Tu medida de Figma */
-    background-color: #000; /* Fondo negro por si la foto tarda en cargar */
+    max-width: 1152px; /* Tu ancho de Figma */
+    
+    /* LA MAGIA AQUÍ: 
+       Usa el 100% de la altura de la pantalla, menos 60px de margen, 
+       así NUNCA se cortará sin importar qué notebook usen */
+    height: calc(100vh - 60px); 
+    
+    /* Ponemos tu medida de Figma solo como límite para pantallas gigantes */
+    max-height: 880px; 
+    background-color: #000;
 }
 
 .swiper-slide {
