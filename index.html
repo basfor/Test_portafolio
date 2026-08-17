@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bastian Flores | Fotógrafo</title>
-    <!-- Cargamos la tipografía Quicksand de Google Fonts -->
+    <!-- Tu tipografía -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- NUEVO: CSS de Swiper.js (El motor del carrusel) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Tu hoja de estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,14 +42,35 @@
             </div>
         </aside>
 
-        <!-- ÁREA PRINCIPAL (Donde irá el carrusel de fotos) -->
+        <!-- ÁREA PRINCIPAL -->
         <main class="content">
-            <!-- Este es el rectángulo gris de tu diseño de Figma -->
-            <div class="cuadro-gris-maqueta">
-                <!-- Aquí después inyectaremos el Swiper.js -->
+            
+            <!-- NUEVO: Contenedor del Carrusel (Reemplaza al cuadro gris) -->
+            <div class="swiper mi-carrusel">
+                <div class="swiper-wrapper">
+                    <!-- Foto 1 (He puesto fotos de prueba de Unsplash) -->
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1554034483-04fda0d3507b?q=80&w=2000" alt="Portada 1">
+                    </div>
+                    <!-- Foto 2 -->
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2000" alt="Portada 2">
+                    </div>
+                    <!-- Foto 3 -->
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2000" alt="Portada 3">
+                    </div>
+                </div>
+                <!-- Flechas para cambiar de foto -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
+
         </main>
     </div>
 
+    <!-- NUEVO: Scripts al final del body -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
