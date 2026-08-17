@@ -1,0 +1,108 @@
+/* Reseteo básico para que se vea igual en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif; /* Tu tipografía elegida */
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* El contenedor que divide la pantalla en 2 */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- TU MENÚ LATERAL --- */
+.sidebar {
+    width: 288px; /* El ancho exacto que le diste en Figma */
+    border-right: 3px solid #000000; /* Tu línea separadora */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px 15px; /* Espaciado superior e inferior */
+    
+    /* Esto lo mantiene fijo al hacer scroll */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto; 
+}
+
+.header-perfil {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.header-perfil h1 {
+    font-weight: 500;
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+
+.header-perfil p {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Menú de navegación */
+.menu {
+    width: 100%;
+    margin-bottom: auto; /* Esto empuja el bloque de contacto hacia abajo */
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Separación entre cada enlace */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.1em; /* El espaciado de letras que pusiste en Figma */
+    transition: color 0.3s ease;
+}
+
+.menu a:hover, .menu a.active {
+    color: #888888; /* Se pone gris al pasar el mouse */
+}
+
+/* Datos de contacto */
+.contacto {
+    text-align: center;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacto p {
+    font-weight: 500;
+    font-size: 18px; 
+}
+
+/* --- ZONA DERECHA (TUS FOTOS) --- */
+.content {
+    flex: 1; /* Toma todo el ancho que sobra de la pantalla */
+    padding: 72px; /* El margen para que el cuadro gris no toque los bordes */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+/* El rectángulo de tu maqueta */
+.cuadro-gris-maqueta {
+    width: 100%;
+    max-width: 1152px; /* Tu medida de Figma */
+    min-height: 880px; /* Tu medida de Figma */
+    background-color: #d9d9d9;
+}
